@@ -1,5 +1,4 @@
-
-  # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 Created on Thu Jan 14 13:44:00 2016
 Updated Jan 21, 2018
@@ -55,5 +54,6 @@ def classifyTriangle(a, b, c):
         return 'Right'
     elif (a != b) and (b != c) and (a != c):
         return 'Scalene'
-    else:
-        return 'Isosceles'
+    elif (a == b or b == c or a == c):
+        return 'Isoceles'
+ 
