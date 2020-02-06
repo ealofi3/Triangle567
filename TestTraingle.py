@@ -30,8 +30,8 @@ class TestTriangles(unittest.TestCase):
     def testScaleneTriangles(self):
         self.assertEqual(classifyTriangle(3, 4, 5), 'Scalene', '3,4,5 should be Scalene')
 
-    def testIsoceleTriangles(self):
-        self.assertEqual(classifyTriangle(7, 7, 8), 'Isoceles', '3,4,5 should be Isoceles')
+    def testIsocelesTriangles(self):
+        self.assertEqual(classifyTriangle(7, 8, 7), 'Isoceles', '7,8,7 should be Isoceles')
 
     def testNotATriangle(self):
         self.assertEqual(classifyTriangle(4, 5, 15), 'NotATriangle', '4,5,15 should be NotAtaqngle')
@@ -43,11 +43,10 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(-1, -3, -7), 'InvalidInput', '-1,-3,-7 are InvalidInput')
 
     def testNotVaildC(self):
-        self.assertEqual(classifyTriangle(2.25, 6, 7), 'InvalidInput', '2.25,6,7are InvalidInput')
+        self.assertEqual(classifyTriangle(2.25, 6, 7), 'InvalidInput', '2.25,6,7 are InvalidInput')
 
 
 if __name__ == '__main__':
     print('Running unit tests')
     unittest.main(exit=False, verbosity=2)
-   
 
